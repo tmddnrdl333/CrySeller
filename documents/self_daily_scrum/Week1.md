@@ -42,6 +42,13 @@
 
 - RESTful API의 URI 규칙 복습, 추가학습
   
-  - 명사는 복수형으로, PUT과 DELETE Method는 보안상 취약하기 때문에 사용하지 않는 것으로.
+  - 명사는 복수형으로. PUT과 DELETE Method는 보안상 취약하기 때문에 사용하지 않는 것으로.
+
+- ERD 규칙 복습, 추가학습
+  
+  - 테이블명은 복수, 컬럼명은 단수로. 명명은 snake case로.
+  - varchar와 char에 대해서는 짧지 않은 역사도 있고 여러 이유가 있지만... 실무자들 중 varchar를 쓰는 편이 낫다고 하는 사람이 많아보인다. 용량 절감과 개발자의 수고를 덜기 위한 목적도 있다고 한다. 
+  - DATE: YYYY-MM-DD, DATETIME: YYYY-MM-DD HH:MM:SS, TIME: HH:MM:SS, TIMESTAMP: 1970-01-01 00\:00:01 \~ 2038-01-19 03\:14:07 UTC
+    - DATETIME은 문자형, 8byte, 입력시 생성, TIMESTAMP는 숫자형, 4byte, 저장시 자동 생성
 
 - API 명세서 작성
