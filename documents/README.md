@@ -14,9 +14,9 @@
 
 - [API 명세서](./API명세서.xlsx)
 
-- ERD (ver.1)
+- ERD (23.02.28 ver.)
   
-  <img title="" src="./ERD-1.png" alt="" width="538">
+  <img title="" src="./ERD.png" alt="" width="538">
 
 - [포팅 매뉴얼 (to-do)](./포팅 매뉴얼.md)
 
