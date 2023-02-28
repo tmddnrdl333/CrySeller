@@ -12,11 +12,13 @@
 
 - [와이어프레임 (넘블 제공)](https://www.figma.com/file/qhTVqHv40sOOC7q5fJkzWI/%EC%B1%8C%EB%A6%B0%EC%A7%80_%EC%B0%B8%EA%B0%80%EC%9E%90-%EA%B3%B5%EA%B0%9C%EC%9A%A9?node-id=0%3A1&t=tyJMb8uepioAAqOz-1)
 
-- [API 명세서 (in-progress)](./API명세서.xlsx)
+- [API 명세서](./API명세서.xlsx)
 
 - ERD (ver.1)
   
-  <img title="" src="./ERD-1.png" alt="" width="373">
+  <img title="" src="./ERD-1.png" alt="" width="538">
+
+- [포팅 매뉴얼 (to-do)](./포팅 매뉴얼.md)
 
 ## 사용 기술
 

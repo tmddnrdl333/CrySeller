@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/CrySeller?userSSL=false&userUnicode=true&serverTimezone=Asia/Seoul
+    username: cs_admin
+    password: cs_admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect

@@ -51,4 +51,24 @@
   - DATE: YYYY-MM-DD, DATETIME: YYYY-MM-DD HH:MM:SS, TIME: HH:MM:SS, TIMESTAMP: 1970-01-01 00\:00:01 \~ 2038-01-19 03\:14:07 UTC
     - DATETIME은 문자형, 8byte, 입력시 생성, TIMESTAMP는 숫자형, 4byte, 저장시 자동 생성
 
-- API 명세서 작성
+- Spring Boot Project 생성
+  
+  - Build Tool은 Gradle-Kotlin 사용
+    
+    - xml을 사용하는 Maven에 비해 간결, 범용성이 큼. Gradle-Groovy에 비해 IDE 지원으로 오류 강조하는 부분이 강점.
+
+## 23.02.28 (화)
+
+- 한 것
+  
+  - Spring Boot Project 초기 설정
+
+- 할 것
+  
+  - Spring Boot 설정 테스트 (JPA, QueryDSL)
+  
+  - Entity 생성, reverse engineering, ERD 갱신
+  
+  - BE Directory 구조 생성
+
+- 
