@@ -70,5 +70,5 @@
   - Entity 생성, reverse engineering, ERD 갱신
   
   - BE Directory 구조 생성
-
-- 
+  
+  - git convention 정리
