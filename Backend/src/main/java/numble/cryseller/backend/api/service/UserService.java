@@ -6,6 +6,7 @@ import numble.cryseller.backend.api.dto.UserResponseDto;
 import numble.cryseller.backend.domain.entity.User;
 import numble.cryseller.backend.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +25,9 @@ public class UserService {
         );
     }
 
+    @Transactional
     public void withdrawl(UserRequestDto userRequestDto) {
-        userRepository.delete(User.builder()
-                .id(userRequestDto.getId())
-                .pw(userRequestDto.getPw())
-                .build());
+        userRepository.deleteByIdAndPw(userRequestDto.getId(), userRequestDto.getPw());
     }
 
     public List<UserResponseDto> getUserList() {

@@ -34,7 +34,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(userResponseDtoList);
     }
 
-    @GetMapping("/{userNo}")
+    @GetMapping("/{no}")
     public ResponseEntity<UserResponseDto> getUserDetail(@PathVariable int no) {
         UserResponseDto userResponseDto = userService.getUserDetail(no);
         return ResponseEntity.status(HttpStatus.OK).body(userResponseDto);

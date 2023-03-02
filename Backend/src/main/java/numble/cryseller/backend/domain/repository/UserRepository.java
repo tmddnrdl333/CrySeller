@@ -8,5 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 // 근데 같은 위치에 두지 않아서 @Repository가 필요한건가? 테스트 후 다시 보자.
 public interface UserRepository extends JpaRepository<User, Integer> {
     User findByNo(int no);
+
     User findByIdAndPw(String id, String pw);
+
+    long deleteByIdAndPw(String id, String pw);
 }
