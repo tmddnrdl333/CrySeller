@@ -18,10 +18,7 @@ public class UserService {
 
     public UserResponseDto signup(UserRequestDto userRequestDto) {
         return new UserResponseDto(
-                userRepository.save(User.builder()
-                        .id(userRequestDto.getId())
-                        .pw(userRequestDto.getPw())
-                        .build())
+                userRepository.save(userRequestDto.toEntity())
         );
     }
 
