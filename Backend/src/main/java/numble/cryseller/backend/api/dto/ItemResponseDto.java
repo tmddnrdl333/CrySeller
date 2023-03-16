@@ -16,7 +16,8 @@ public class ItemResponseDto {
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
     public static class ItemInfoRes {
 
-        private Category category; // find해서 넣어야 할듯
+        private int no;
+        private Category category; // find해서 넣기
         private String name;
         private String imgLink;
         private int quantity;
@@ -27,6 +28,7 @@ public class ItemResponseDto {
         private LocalDateTime availableDateTime;
 
         public ItemInfoRes(Item item) {
+            this.no = item.getNo();
             this.category = item.getCategory();
             this.name = item.getName();
             this.imgLink = item.getImgLink();
