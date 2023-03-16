@@ -3,25 +3,25 @@ package numble.cryseller.backend.domain.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 
 @Entity(name = "items")
-@Data
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Items {
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int no;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_no")
-    private Categories categories;
+    private Category category;
 
     @Column(length = 45, nullable = false)
     private String name;
