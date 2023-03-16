@@ -16,38 +16,40 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
-    public UserResponseDto signup(UserRequestDto userRequestDto) {
-        return new UserResponseDto(
-                userRepository.save(User.builder()
-                        .id(userRequestDto.getId())
-                        .pw(userRequestDto.getPw())
-                        .build())
+    public UserResponseDto.UserInfo signup(UserRequestDto.IdAndPw idAndPw) {
+        return new UserResponseDto.UserInfo(
+                userRepository.save(
+                        User.builder()
+                                .id(idAndPw.getId())
+                                .pw(idAndPw.getPw())
+                                .build()
+                )
         );
     }
 
     @Transactional
-    public void withdrawl(UserRequestDto userRequestDto) {
-        userRepository.deleteByIdAndPw(userRequestDto.getId(), userRequestDto.getPw());
+    public void withdrawal(UserRequestDto.IdAndPw idAndPw) {
+        userRepository.deleteByIdAndPw(idAndPw.getId(), idAndPw.getPw());
     }
 
-    public List<UserResponseDto> getUserList() {
-        List<UserResponseDto> userResponseDtoList = new ArrayList<>();
+    public List<UserResponseDto.UserInfo> getUserList() {
+        List<UserResponseDto.UserInfo> userInfoList = new ArrayList<>();
         List<User> userList = userRepository.findAll();
         for (User user : userList) {
-            userResponseDtoList.add(new UserResponseDto(user));
+            userInfoList.add(new UserResponseDto.UserInfo(user));
         }
-        return userResponseDtoList;
+        return userInfoList;
     }
 
-    public UserResponseDto getUserDetail(int no) {
-        return new UserResponseDto(
-                userRepository.findByNo(no)
+    public UserResponseDto.UserInfo getUserDetail(int no) {
+        return new UserResponseDto.UserInfo(
+                userRepository.findByNo(no) // 없을 경우 throw exception
         );
     }
 
-    public UserResponseDto login(UserRequestDto userRequestDto) {
-        return new UserResponseDto(
-                userRepository.findByIdAndPw(userRequestDto.getId(), userRequestDto.getPw())
+    public UserResponseDto.UserInfo login(UserRequestDto.IdAndPw idAndPw) {
+        return new UserResponseDto.UserInfo(
+                userRepository.findByIdAndPw(idAndPw.getId(), idAndPw.getPw()) // 없을 경우 throw exception
         );
     }
 }
