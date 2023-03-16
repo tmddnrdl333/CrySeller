@@ -2,11 +2,7 @@
 
 ## Self Daily Scrum
 
-- [Week1](./self_daily_scrum/Week1.md)
-
-- [Week2](./self_daily_scrum/Week2.md)
-
-- [Week3](./self_daily_scrum/Week3.md)
+- [DailyScrum](./DailyScrum.md)
 
 ## 설계 문서
 
@@ -18,7 +14,7 @@
   
   <img title="" src="./ERD.png" alt="" width="538">
 
-- [포팅 매뉴얼 (to-do)](./포팅 매뉴얼.md)
+- [포팅\_매뉴얼 (to-do)](./포팅_매뉴얼.md)
 
 ## 사용 기술
 
