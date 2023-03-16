@@ -72,3 +72,97 @@
   - BE Directory 구조 생성
   
   - git convention 정리
+
+## 23.03.01 (수)
+
+- 한 것
+  
+  - Entity 생성, ERD 갱신
+  
+  - BE dir 구조 결정
+  
+  - git flow 전략, commit convention 정리
+
+- 할 것
+  
+  - controller, service, exception, dto 등 user 관련 내용 전부 구현
+  
+  - user 관련 기능 테스트
+  
+  - 가능하면 swagger-ui 적용
+
+## 23.03.02 (목)
+
+- 한 것
+  
+  - Spring Data JPA 복습, 추가학습
+  
+  - JPA, QueryDSL 테스트
+
+- 할 것
+  
+  - User 관련 기능 마무리
+  
+  - Swagger-ui 적용
+
+- Spring Boot 3 버전을 처음 사용해봐서... javax에서 jakarta로 넘어가면서 QuerydslConfig에 문제가 생긴 것을 처음 알았다. 구글링을 통해 해결했다... [TIL]([TIL/Spring Boot 3.0 이상 버전에서 QueryDsl 사용하는 방법.md at main · tmddnrdl333/TIL · GitHub](https://github.com/tmddnrdl333/TIL/blob/main/%EA%B3%B5%EB%B6%80/Spring%20Boot%203.0%20%EC%9D%B4%EC%83%81%20%EB%B2%84%EC%A0%84%EC%97%90%EC%84%9C%20QueryDsl%20%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%20%EB%B0%A9%EB%B2%95.md))에 정리해뒀다.
+
+## 23.03.03 (금)
+
+- 한 것
+  
+  - User 관련 기능 초기버전 작성, Postman 테스트
+  
+  - Spring Boot JPA, QueryDsl 버그 문제 해결
+
+- 할 것
+  
+  - User 관련 기능 마무리, Swagger-UI 적용, ver.1 마무리
+  
+  - CI/CD 학습, nGrinder 학습
+
+## 23.03.05 (일)
+
+- 한 것
+  
+  - User 관련 기능 마무리, Swagger 적용 (springdoc openapi)
+
+- 할 것
+  
+  - CI/CD 학습
+
+- 어려웠던 것
+  
+  - Spring Boot 3 이상 버전에서 build tool을 비롯해 swagger와의 버전 호환 등에서 접해보지 못한 문제들이 있었음. 구글링으로 개발자 블로그들의 도움을 얻어 해결했지만, 시간 소요가 많았음.
+
+## 23.03.06 (월)
+
+- 한 것
+  
+  - CI/CD 학습
+
+- 할 것
+  
+  - Naver Cloud 신청, CI/CD 진행 
+
+## 23.03.13 (수)
+
+- 한 것
+  
+  - 기능 구현 가능한데까지
+
+- 할 것
+  
+  - CI/CD
+
+## 23.03.16 (목)
+
+- 한 것
+  
+  - User, Item, Category 관련 API 작동 확인 (설계 ver.2까지, 로컬 단계에서)
+
+- 마무리
+  
+  - 아직 완성하지 못했지만, 최종 제출일이 되었다.
+  
+  - 최종 제출은 미비상태로 하겠지만, 바쁜 일정이 끝난 후에는 반드시 CI/CD와 배포까지 마무리 할 것이다.
