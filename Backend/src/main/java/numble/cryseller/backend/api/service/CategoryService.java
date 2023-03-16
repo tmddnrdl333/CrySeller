@@ -14,18 +14,18 @@ import java.util.List;
 public class CategoryService {
     private final CategoryRepository categoryRepository;
 
-    public List<CategoryResponseDto> getCategoryList() {
-        List<CategoryResponseDto> categoryResponseDtoList = new ArrayList<>();
+    public List<CategoryResponseDto.NoAndNameRes> getCategoryList() {
+        List<CategoryResponseDto.NoAndNameRes> noAndNameResList = new ArrayList<>();
         List<Category> categoryList = categoryRepository.findAll();
         for (Category category : categoryList) {
-            categoryResponseDtoList.add(new CategoryResponseDto(category));
+            noAndNameResList.add(new CategoryResponseDto.NoAndNameRes(category));
         }
-        return categoryResponseDtoList;
+        return noAndNameResList;
     }
 
-    public CategoryResponseDto getCategoryDetail(int no) {
-        return new CategoryResponseDto(
-                categoryRepository.findByNo(no)
+    public CategoryResponseDto.NoAndNameRes getCategoryDetail(int no) {
+        return new CategoryResponseDto.NoAndNameRes(
+                categoryRepository.findByNo(no) // 없으면 throw exception
         );
     }
 }
